@@ -32,20 +32,30 @@ public class UserService {
         return user;
     }
 
-    public boolean editUser(User user) {
-        boolean flag = false;
+    public User editUser(int userId, String firstName, String lastName, String email, String dob) {
+        User user = null;
         try {
-            flag = repository.editUser(user);
+            user = repository.editUser(userId, firstName, lastName, email, dob);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return flag;
+        return user;
     }
 
     public User getUser(int userId) {
         User user = null;
         try {
             user = repository.getUser(userId);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return user;
+    }
+
+    public User changePassword(int userId, String password) {
+        User user = null;
+        try {
+            user = repository.changePassword(userId, password);
         } catch (Exception e) {
             e.printStackTrace();
         }

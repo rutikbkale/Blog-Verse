@@ -1,18 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var msgValue = document.getElementById('msg').value.trim();
-    if (msgValue == true) {
-        swal({
-            title: "Login Successfully !",
-            icon: "success",
-        }).then((value) => {
-            window.location = "user/dashboard";
-        });
-    } else {
-        swal({
-            title: "Failed To Login!",
-            icon: "error",
-        }).then((value) => {
-            window.location = "signin";
-        });
+    const msgElement = document.getElementById('msg');
+    if (msgElement) {
+        const msg = msgElement.value.trim();
+        console.log(msg)
+        if (msg === 'done') {
+            swal({
+                title: "Successfully Logged In!",
+                icon: "success",
+            }).then((value) => {
+                window.location = "user/dashboard"; // Ensure this matches your actual dashboard path
+            });
+        } else if (msg === 'error') {
+            swal({
+                title: "Failed To Log In!",
+                text: "Invalid credentials. Please try again.",
+                icon: "error",
+            });
+        }
     }
 });

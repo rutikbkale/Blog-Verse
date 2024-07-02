@@ -25,31 +25,31 @@
                             <form class="row g-3" action="user/signupForm" method="POST" id="signupForm">
                                 <div class="col-md-6">
                                     <label for="fName" class="form-label fw-semibold">First Name</label>
-                                    <input type="text" class="form-control" id="firstName" name="firstName">
+                                    <input type="text" class="form-control" id="firstName" name="firstName" required="required">
                                 </div>
                                 <div class="col-md-6">
                                     <label for="lName" class="form-label fw-semibold">Last Name</label>
-                                    <input type="text" class="form-control" id="lastName" name="lastName">
+                                    <input type="text" class="form-control" id="lastName" name="lastName" required="required">
                                 </div>
                                 <div class="col-12">
                                     <label for="inputEmail" class="form-label fw-semibold">Email</label>
-                                    <input type="email" class="form-control" id="inputEmail" name="email">
+                                    <input type="email" class="form-control" id="inputEmail" name="email" required="required">
                                 </div>
                                 <div class="col-md-6">
                                     <label for="mobno" class="form-label fw-semibold">Mobile No. </label>
-                                    <input type="tel" class="form-control" id="mobNo" name="mobNo">
+                                    <input type="tel" class="form-control" id="mobNo" name="mobNo" required="required">
                                 </div>
                                 <div class="col-md-6">
                                     <label for="dob" class="form-label fw-semibold">Date of Birth</label>
-                                    <input type="date" class="form-control" id="dob" name="dob">
+                                    <input type="date" class="form-control" id="dob" name="dob" required="required">
                                 </div>
                                 <div class="col-md-6">
                                     <label for="password" class="form-label fw-semibold">Password</label>
-                                    <input type="password" class="form-control" id="password" name="password">
+                                    <input type="password" class="form-control" id="password" name="password" required="required">
                                 </div>
                                 <div class="col-md-6">
                                     <label for="checkpass" class="form-label fw-semibold">Re-Enter Password </label>
-                                    <input type="password" class="form-control" id="checkpass" name="checkpass">
+                                    <input type="password" class="form-control" id="checkpass" name="checkpass" required="required">
                                 </div>
                                 <div class="container text-center my-3" style="display: none" id="loader">
                                     <span class="fa fa-refresh fa-spin fa-3x" style="color: red"></span>

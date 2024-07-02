@@ -16,21 +16,18 @@
                             <p class="fw-bold">Sign In</p>
                         </div>
                         <div class="card-body">
-
                             <form class="row g-3" action="user/signinForm" method="post" id="signinForm">
                                 <div class="col-md-12">
-
                                     <c:if test="${not empty msg}">
                                         <input type="hidden" id="msg" value="${msg}">
                                         <c:remove var="msg"/>
                                     </c:if>
-
                                     <label for="mobno" class="form-label fw-semibold">Mobile No. </label>
-                                    <input type="tel" class="form-control" id="mobno" name="mobNo">
+                                    <input type="tel" class="form-control" id="mobno" name="mobNo" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for="password" class="form-label fw-semibold">Password</label>
-                                    <input type="password" class="form-control" id="password" name="password">
+                                    <input type="password" class="form-control" id="password" name="password" required>
                                 </div>
                                 <div class="col-12 text-center">
                                     <button type="submit" class="btn btn-warning text-white btn-lg fw-semibold " id="signin-btn"> Login </button>

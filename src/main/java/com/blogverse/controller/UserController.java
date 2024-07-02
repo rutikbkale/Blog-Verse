@@ -2,6 +2,7 @@ package com.blogverse.controller;
 
 import com.blogverse.entity.User;
 import com.blogverse.service.UserService;
+import javax.persistence.PostRemove;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -46,14 +47,54 @@ public class UserController {
             user = service.validUser(mobNo, password);
             if (user != null) {
                 session.setAttribute("currentUser", user);
-                session.setAttribute("msg", true);
+                session.setAttribute("msg", "done");
             } else {
-                session.setAttribute("msg", true);
+                session.setAttribute("msg", "error");
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
         return "redirect:/signin";
+    }
+
+    @PostMapping("/editForm")
+    public String editForm(@RequestParam int userId,
+            @RequestParam String firstName,
+            @RequestParam String lastName,
+            @RequestParam String email,
+            @RequestParam String dob, HttpSession session) {
+
+        User user = null;
+        try {
+            user = service.editUser(userId, firstName, lastName, email, dob);
+            if (user != null) {
+                session.setAttribute("currentUser", user);
+                session.setAttribute("msg", "done");
+            } else {
+                session.setAttribute("msg", "error");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return "redirect:dashboard";
+    }
+
+    @PostMapping("/changePassword")
+    public String changePassword(@RequestParam String password, @RequestParam int userId, HttpSession session) {
+        User user = null;
+        try {
+            user = service.changePassword(userId, password);
+            if (user != null) {
+                session.setAttribute("currentUser", user);
+                session.setAttribute("msg", "done");
+            } else {
+                session.setAttribute("msg", "error");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "redirect:dashboard";
     }
 
 }
