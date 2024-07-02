@@ -14,5 +14,6 @@
     <body>
         <%@include file="userNav.jsp" %>
         <script src="${pageContext.request.contextPath}/static/js/signout.js"></script>
+        <%@include file="../commons/footer.jsp" %>
     </body>
 </html>

@@ -97,4 +97,9 @@ public class UserController {
         return "redirect:dashboard";
     }
 
+    @RequestMapping("/addPost")
+    public String addPost() {
+        return "user/addPost";
+    }
+
 }

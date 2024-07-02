@@ -10,6 +10,12 @@
                     <a class="nav-link active text-white fs-5" aria-current="page" href="dashboard"><i class="fa-solid fa-house"></i> &nbsp;Home</a>
                 </li>
                 <li class="nav-item mx-4">
+                    <a class="nav-link active text-white fs-5" aria-current="page" href="../category/getCategories"><i class="fa-solid fa-blog"></i></i> &nbsp;Add Post</a>
+                </li>
+                <li class="nav-item mx-4">
+                    <a class="nav-link active text-white fs-5" aria-current="page" href="viewBlog"><i class="fa-solid fa-eye"></i></i> &nbsp;View Blogs</a>
+                </li>
+                <li class="nav-item mx-4">
                     <a class="nav-link active text-white fs-5" data-bs-toggle="modal" data-bs-target="#profileModal" href="#?"><i class="fas fa-user-circle"></i> Profile</a>
                 </li>
                 <li class="nav-item mx-4">
