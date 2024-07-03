@@ -102,4 +102,9 @@ public class UserController {
         return "user/addPost";
     }
 
+    @RequestMapping("/viewPost")
+    public String viewPost() {
+        return "user/viewPost";
+    }
+
 }

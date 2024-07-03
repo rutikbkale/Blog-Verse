@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
             title: "Post Added Successfully !",
             icon: "success",
         }).then((value) => {
-            window.location = "dashboard";
+            window.location = "viewPost";
         });
     } else {
         swal({

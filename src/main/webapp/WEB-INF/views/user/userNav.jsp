@@ -7,19 +7,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto  mb-lg-0">
                 <li class="nav-item mx-4">
-                    <a class="nav-link active text-white fs-5" aria-current="page" href="dashboard"><i class="fa-solid fa-house"></i> &nbsp;Home</a>
+                    <a class="nav-link active text-white fs-5" aria-current="page" href="../user/dashboard"><i class="fa-solid fa-house"></i> &nbsp;Home</a>
                 </li>
                 <li class="nav-item mx-4">
                     <a class="nav-link active text-white fs-5" aria-current="page" href="../category/getCategories"><i class="fa-solid fa-blog"></i></i> &nbsp;Add Post</a>
                 </li>
                 <li class="nav-item mx-4">
-                    <a class="nav-link active text-white fs-5" aria-current="page" href="viewBlog"><i class="fa-solid fa-eye"></i></i> &nbsp;View Blogs</a>
+                    <a class="nav-link active text-white fs-5" aria-current="page" href="../post/viewAllPosts"><i class="fa-solid fa-eye"></i></i> &nbsp;View Posts</a>
                 </li>
                 <li class="nav-item mx-4">
                     <a class="nav-link active text-white fs-5" data-bs-toggle="modal" data-bs-target="#profileModal" href="#?"><i class="fas fa-user-circle"></i> Profile</a>
-                </li>
-                <li class="nav-item mx-4">
-                    <a class="nav-link active text-white fs-5" href="#" onclick="signout()"><i class="fas fa-sign-out-alt"></i>&nbsp; Sign out</a>
                 </li>
             </ul>
         </div>
@@ -156,3 +153,4 @@
         </div>
     </div>
 </div>
+<script src="${pageContext.request.contextPath}/static/js/signout.js"></script>
