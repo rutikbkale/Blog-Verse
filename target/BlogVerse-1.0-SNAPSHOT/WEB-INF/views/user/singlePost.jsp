@@ -5,6 +5,7 @@
 <html>
     <head>
         <%@include file="../commons/common_cdns.jsp" %>
+        <script src="${pageContext.request.contextPath}/static/js/likePost.js"></script>
     </head>
     <body>
         <%@include file="userNav.jsp" %>
@@ -30,7 +31,7 @@
                             </div>
                         </div>
                         <div class="card-footer bg-warning text-white d-flex justify-content-around">
-                            <a href="#" class="btn btn-sm btn-outline-light"><i class="fa-regular fa-thumbs-up"></i><span> 10</span></a>
+                            <a href="#" onclick="likedPost(${post.postId}, ${currentUser.userId})" class="btn btn-sm btn-outline-light"><i class="fa-regular fa-thumbs-up"></i><span> 10</span></a>
                             <a href="#" class="btn btn-sm btn-outline-light"><i class="fa-regular fa-comments"></i><span> 10</span></a>
                         </div>
                     </div>

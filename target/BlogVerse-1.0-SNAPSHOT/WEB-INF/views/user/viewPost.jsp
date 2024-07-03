@@ -6,7 +6,6 @@
 <html>
     <head>
         <%@ include file="../commons/common_cdns.jsp" %>
-        <!--<script src="${pageContext.request.contextPath}/static/js/viewPost.js"></script>-->
     </head>
     <body>
         <%@ include file="userNav.jsp" %>
@@ -48,10 +47,8 @@
                                     <p class="card-text"><small class="text-muted">Posted at: <fmt:formatDate value="${post.createdAt}" pattern="dd-MM-yyyy"/></small></p>
                                 </div>
                             </div>
-                            <div class="card-footer bg-warning text-white d-flex justify-content-around">
+                            <div class="card-footer bg-warning text-white mt-2 text-center">
                                 <a href="singlePost?postId=${post.postId}" class="btn btn-sm btn-outline-light">Learn More ...</a>
-                                <a href="#" class="btn btn-sm btn-outline-light"><i class="fa-regular fa-thumbs-up"></i><span> 10</span></a>
-                                <a href="#" class="btn btn-sm btn-outline-light"><i class="fa-regular fa-comments"></i><span> 10</span></a>
                             </div>
                         </div>
                     </div>
