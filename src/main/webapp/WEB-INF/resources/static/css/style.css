@@ -24,9 +24,9 @@ footer{
 }
 
 .hero-section{
-    background-image: url('../images/hero-img.webp');
-    height: 680px;
-    width: 1600px;
+    background-image: url('../images/bg-img.jpeg');
+    height: 90vh;
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
 }

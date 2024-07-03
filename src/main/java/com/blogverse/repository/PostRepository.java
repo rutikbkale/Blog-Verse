@@ -53,4 +53,14 @@ public class PostRepository {
         });
     }
 
+    public Post getPostById(int postId) {
+        Post post = null;
+        try {
+            post = template.get(Post.class, postId);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return post;
+    }
+
 }

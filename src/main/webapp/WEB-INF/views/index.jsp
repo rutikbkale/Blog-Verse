@@ -7,7 +7,7 @@
     <body>
         <%@include file="commons/navbar.jsp" %>
 
-        <section class="hero-section text-center d-flex justify-content-center">
+        <section class="hero-section text-center d-flex align-items-center justify-content-center">
             <div class="hero-content">
                 <h1 class="text-white">Welcome to Blog Verse</h1>
                 <p class="text-white">Your platform to share and explore amazing stories and ideas.</p>

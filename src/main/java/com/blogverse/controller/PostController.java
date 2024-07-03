@@ -75,4 +75,16 @@ public class PostController {
         return "user/viewPost";
     }
 
+    @RequestMapping("/singlePost")
+    public String singlePost(@RequestParam int postId, Model model) {
+        Post post = null;
+        try {
+            post = service.getPostById(postId);
+            model.addAttribute("post", post);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "user/singlePost";
+    }
+
 }

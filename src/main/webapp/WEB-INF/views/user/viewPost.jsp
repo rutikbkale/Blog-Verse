@@ -36,18 +36,22 @@
                 <c:forEach var="post" items="${posts}">
                     <div class="col-md-6">
                         <div class="card mb-3">
-                            <div class="card-body">
+                            <div class="card-header bg-warning text-white">
                                 <div class="d-flex justify-content-between">
                                     <h5 class="card-title">${post.title}</h5>
                                     <p class="card-text"><small class="text-muted">Category: ${post.category.name}</small></p>
                                 </div>
-                                <div class="pb-5 mt-2">
-                                <p class="card-text">${post.content}</p>
-                                </div>
+                            </div>
+                            <div class="card-body">
                                 <div class="d-flex justify-content-between">
                                     <p class="card-text"><small class="text-muted">Posted by: ${post.user.firstName} ${post.user.lastName}</small></p>
                                     <p class="card-text"><small class="text-muted">Posted at: <fmt:formatDate value="${post.createdAt}" pattern="dd-MM-yyyy"/></small></p>
                                 </div>
+                            </div>
+                            <div class="card-footer bg-warning text-white d-flex justify-content-around">
+                                <a href="singlePost?postId=${post.postId}" class="btn btn-sm btn-outline-light">Learn More ...</a>
+                                <a href="#" class="btn btn-sm btn-outline-light"><i class="fa-regular fa-thumbs-up"></i><span> 10</span></a>
+                                <a href="#" class="btn btn-sm btn-outline-light"><i class="fa-regular fa-comments"></i><span> 10</span></a>
                             </div>
                         </div>
                     </div>

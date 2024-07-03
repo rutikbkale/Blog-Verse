@@ -46,4 +46,8 @@ public class PostService {
         return repository.getAllPostsByUserId(userId);
     }
 
+    public Post getPostById(int postId) {
+        return repository.getPostById(postId);
+    }
+
 }
