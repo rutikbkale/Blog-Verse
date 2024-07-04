@@ -1,5 +1,4 @@
 com\blogverse\controller\PostController.class
-com\blogverse\controller\LikeController.class
 com\blogverse\entity\Liked.class
 com\blogverse\service\CategoryService.class
 com\blogverse\config\WebMvcViewResolver.class
@@ -11,6 +10,7 @@ com\blogverse\entity\User.class
 com\blogverse\controller\CommonController.class
 com\blogverse\service\LikeService.class
 com\blogverse\config\DispatcherServlet.class
+LikeController.class
 com\blogverse\JakartaRestConfiguration.class
 com\blogverse\controller\CategoryController.class
 com\blogverse\repository\CategoryRepository.class

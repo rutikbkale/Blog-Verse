@@ -1,4 +1,4 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
@@ -31,8 +31,8 @@
                             </div>
                         </div>
                         <div class="card-footer bg-warning text-white d-flex justify-content-around">
-                            <a href="#" onclick="likedPost(${post.postId}, ${currentUser.userId})" class="btn btn-sm btn-outline-light"><i class="fa-regular fa-thumbs-up"></i><span> 10</span></a>
-                            <a href="#" class="btn btn-sm btn-outline-light"><i class="fa-regular fa-comments"></i><span> 10</span></a>
+                            <a href="#" onclick="likedPost(${post.postId}, ${currentUser.userId})" class="btn btn-sm btn-outline-light"><i class="fa-regular fa-thumbs-up" id="thumb-icon-${post.postId}"></i> <span id="like-counter-${post.postId}">${likeCounter}</span></a>
+                            <a href="#" class="btn btn-sm btn-outline-light"><i class="fa-regular fa-comments"></i> <span>10</span></a>
                         </div>
                     </div>
                 </div>
